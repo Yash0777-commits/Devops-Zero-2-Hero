@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# script to print number of "s" in word "mississipi"
+
+set -e
+
+x=mississipi
+
+grep -o "s" <<<"$x" | wc -l
+
+y=singaporeee
+
+e_count=$(echo "$y" | awk -F'e' '{print NF-1}')
+
+echo $e_count
